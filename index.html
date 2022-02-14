@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Website</title>
+    <link rel="shortcut icon" type="image" href="weblogo.png"
+     <!-- below is the link of font awesome icon  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-device-width: 608px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (max-device-width: 502px)" href="phone.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!--      creating navigation menu        -->
+        <div class="navbar">
+            <div id="nav">
+                <ul class="links">
+                    <li><a href="" class="nvg">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">WORK</a></li>
+                    <li><a href="">SKILL</a></li>
+                    <li><a href="">CONTACT</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!-- creating hamburger icon        -->
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+
+        <!-- adding social media icons     -->
+        <div id="follow">
+            <a href="https://www.instagram.com/instagram"><i class="fa fa-linkedin" aria-hidden="true"></i><br></a>
+            <a href="https://www.facebook.com/anmol.kumar"> <i class="fa fa-facebook-official" aria-hidden="true"></i><br></a>
+            <a href="https://twitter.com/anmol07x"><i class="fa fa-twitter" aria-hidden="true"></i><br></a>
+        </div>
+
+        
+        <div id="develop">Kumar</div>
+        <div id="web">Anmol</div>
+        <div id="dev">Kumar</div>
+        <div id="fullstack">Dev</div>
+        <!-- this box contain some information    -->
+        <div id="box1">
+            <div id="web2">Anmol<span id="dev2">Kumar</span></div>
+            <div id="vl"></div>
+            <div id="hello">Hi,</div>
+            <div id="me">I'm <span id="rks">Anmol Kumar</span></div>
+            <div id="fullstackdev">Full Stack <span id="webdev22"> Web Developer,</span> <span id="webdev22"> Student</span> </div>
+        </div>
+
+        <div id="square1"></div>
+        <div id="square2"></div>
+        
+        <!-- creating button     -->
+        <button id="btncontact" type="button">Contact</button>
+
+        <!-- Adding profile image in background -->
+        <div id="pic">
+            <img src="pic2.png" alt="">
+        </div>
+    </div>
+
+    <!-- javascript for functioning of sidebar menu  -->
+    <script>
+
+        const slide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.navbar');
+            const navlinks = document.querySelectorAll('.links li');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('navbaract');
+
+                navlinks.forEach((link, index) => {
+
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    }
+                    else {
+                        link.style.animation = `navlinkfade 4s ease backwards ${index / 10}s`;
+                    }
+                });
+            });
+        }
+        slide();
+
+    </script>
+
+</body>
+
+</html>
